@@ -1,0 +1,31 @@
+.goods_item {
+    display: flex;
+    border-bottom: 3rpx solid aliceblue;
+    height: 200rpx;
+}
+.goods_item .pic {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pic .goods_item_pic {
+    width: 70%;
+}
+.goods_item .info {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.info .info_title {
+    /* 显示一行 */
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.info .info_price {
+    color: var(--themeColor);
+    font-size: 32rpx;
+}

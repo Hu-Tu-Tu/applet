@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "收藏页面",
+  "usingComponents": {
+    "tabs":"../../component/tabs/tabs"
+  }
+}

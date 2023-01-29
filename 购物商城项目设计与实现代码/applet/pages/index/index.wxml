@@ -1,0 +1,46 @@
+<!-- 自定义组件-搜索框 -->
+<searchinput/>
+<!-- 轮播图效果 -->
+<swiper  class="banner" indicator-dots indicator-color="rgba(255,255,255,0.5)" indicator-active-color="#fff" circular autoplay>
+    <swiper-item class="banner-item" wx:for="{{banner}}" wx:key="*this">
+        <navigator url="{{item.navigator_url}}" open-type="{{item.open_type}}" >
+            <image src="{{item.image_src}}" mode="widthFix" class="banner-pic"></image>
+        </navigator>
+    </swiper-item>
+</swiper>
+
+<!-- 轮播下面的导航 -->
+<scroll-view class="major" scroll-x wx:if="{}">
+    <navigator wx:for="{{majorList}}" wx:key="index" url="{{item.url}}" open-type="{{item.opentype}}">
+        <image class="pic" src="{{item.src}}"></image>
+        <view class="txt">{{item.txt}}</view>
+    </navigator>
+</scroll-view>
+
+<view style="background-color:aliceblue" class="container">
+    <!-- 专题展示 -->
+    <view class="topic">
+        <view class="topic-txt">
+            <view>Special exhibition</view>
+            <view style="font-size: 24rpx;color: #666;">--专注于你，我们更贴心--</view>
+        </view>
+    </view>
+
+    <!-- 楼层 -->
+    <view class="floor">
+        <view class="floor_group" wx:for="{{floor}}" wx:key="*this" wx:for-item="outitem" wx:for-index="i">
+            <!-- 标题 -->
+            <view class="floor_title">
+                <image src="{{outitem.floor_title.image_src}}" class="outpic" mode="widthFix"></image>
+            </view>
+            <view class="floor_list">
+                <!--  "/pages/goods_list?query=服饰" -->
+                <navigator wx:for="{{outitem.product_list}}" wx:for-item="inneritem" wx:for-index="j" wx:key="*this" class="innernav" url="{{inneritem.navigator_url}}" >
+                    <!-- {{j===0?'widthFix':'scaleToFill'}}如果是第一张图片就自适应widthFix否则就对图片进行拉伸到当前需要的高度 -->
+                    <image src="{{inneritem.image_src}}" class="{{j===0?'pic-left':'pic-right'}}" mode="{{j===0?'widthFix':'scaleToFill'}}"></image>
+                </navigator>
+            </view>
+        </view>
+    </view>
+</view>
+

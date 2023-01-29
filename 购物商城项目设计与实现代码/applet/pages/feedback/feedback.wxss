@@ -1,0 +1,10 @@
+page {background-color: #eeeeee;}
+.fb_main {color: #666666;padding: 20rpx;}
+.fb_main .fb_tips {display: flex;flex-wrap: wrap;}
+.fb_tips .tips_item {background-color: white;width: 30%;padding: 10rpx;text-align: center;margin: 10rpx;}
+.fb_main .fb_content {background-color: white;margin-top: 30rpx;}
+.fb_content .content_tool {display: flex;flex-wrap: wrap;}
+.content_tool .but {margin: 0; width: 90rpx;height: 90rpx;padding: 30rpx;font-size: 40rpx;padding: 0;display: flex;justify-content: center;align-items: center;border: 1rpx solid #d1d1d1;font-size: 50rpx;color: #d1d1d1;margin-left: 20rpx;margin-bottom: 10rpx;}
+
+.fb_main .fb_submit {margin-top: 20rpx;justify-content: flex-end;display: flex;}
+.fb_submit .sub_but {width: 30%;margin: 0;display: flex;background-color: var(--themeColor);color: white;}

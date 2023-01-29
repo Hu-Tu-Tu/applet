@@ -1,0 +1,3 @@
+.bg {width: 90rpx;height: 90rpx;position: relative;margin-bottom: 10rpx;margin-left: 20rpx;}
+.bg .bg_image {width: 100%;height: 100%;border-radius: 15rpx;}
+.bg .bg_icon {position: absolute;top: -22rpx;right: -22rpx;}

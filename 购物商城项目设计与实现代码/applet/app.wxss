@@ -1,0 +1,21 @@
+/* @import "./styles/iconfont.wxss" */
+/* 初始化组件的样式 */
+page,view,text,swiper,swiper-item,image,navigator {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* 微信小程序支持变量 */
+page {
+    /* 主题颜色 */
+    --themeColor:#eb4450;
+    /* 字体大小 */
+    font-size: 28rpx;
+}
+/* 全局的padding */
+.container {
+    padding: 0 26rpx;
+    box-sizing: border-box;
+}
+/* 引入全局的图标 */
+@import "./styles/iconfont.wxss"

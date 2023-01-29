@@ -1,0 +1,4 @@
+<view class="bg">
+    <!-- <icon type="clear" color="red" class="bg_icon"></icon> -->
+    <image src="{{src}}" class="bg_image"></image>
+</view>

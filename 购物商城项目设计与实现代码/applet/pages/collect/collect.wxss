@@ -1,0 +1,39 @@
+.collect {background-color: #f3f4f6;}
+.collect .collect_title {padding: 20rpx 0;display: flex;}
+.collect_title .tips {padding: 15rpx;border: 1rpx solid #ccc;margin-left: 25rpx;background-color: white;}
+.collect_title .active {color: var(--themeColor);border-color: currentColor;}
+
+
+
+.goods_item {
+    background-color: white;
+    display: flex;
+    border-bottom: 3rpx solid rgb(223, 238, 252);
+    height: 200rpx;
+}
+.goods_item .pic {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pic .goods_item_pic {
+    width: 70%;
+}
+.goods_item .info {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.info .info_title {
+    /* 显示一行 */
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.info .info_price {
+    color: var(--themeColor);
+    font-size: 32rpx;
+}

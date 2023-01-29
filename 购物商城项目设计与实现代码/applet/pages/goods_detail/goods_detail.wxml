@@ -1,0 +1,48 @@
+<!-- 图片轮播 -->
+<swiper class="binner" circular="true" indicator-dots="true" autoplay="true">
+    <swiper-item wx:for="{{goodsObj.pics}}" wx:key="*this" class="binner_item"bindtap="prevePic" data-url="{{item.pics_mid}}">
+        <image src="{{item.pics_mid}}" mode="widthFix" class="binner_pic"></image>
+    </swiper-item>
+</swiper>
+<!-- 价格 -->
+<view class="price">￥{{goodsObj.goods_price}}</view>
+<!-- 名字和收藏 -->
+<view class="row">
+    <view class="name">{{goodsObj.goods_name}}</view>
+    <view class="collect" bindtap="collectChange">
+        <text class="iconfont icon-{{isCollect?'shoucangxuanzhong':'shoucang2'}} collect_icon"></text>
+        <!-- isCollect?'icon-shoucang1':'icon-shoucang' -->
+        <view class="collect_txt">收藏</view>
+    </view>
+</view>
+<!-- 图文详情 -->
+<view class="detail">
+    <view class="title">图文详情</view>
+    <view class="info">
+        <!-- 富文本编辑 -->
+        <rich-text nodes="{{goodsObj.goods_introduce}}"></rich-text>
+    </view>
+</view>
+<!-- 底部 -->
+<view class="bot">
+    <view class="bot_item">
+        <view class="iconfont icon-kefu"></view>
+        <view>客服</view>
+        <button open-type="contact" class="but"></button>
+    </view>
+    <view class="bot_item">
+        <view class="iconfont icon-fenxiang"></view>
+        <view>分享</view>
+        <button open-type="share" class="but"></button>
+    </view>
+    <navigator class="bot_item" url="/pages/cart/cart" open-type="switchTab">
+        <view class="iconfont icon-gouwuche"></view>
+        <view>购物车</view>
+    </navigator>
+    <view class="bot_item bot_car" bindtap="cartAdd">
+        <view>加入购物车</view>
+    </view>
+    <view class="bot_item bot_buy" bindtap="buy">
+        <view>立即购买</view>
+    </view>
+</view>

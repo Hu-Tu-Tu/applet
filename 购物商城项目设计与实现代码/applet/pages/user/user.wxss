@@ -1,0 +1,32 @@
+page {background-color: #edece8;}
+/* 头像 */
+.user {height: 45vh;background-color: var(--themeColor);overflow: hidden;position: relative;}
+/* filter: blur(10rpx);高斯模糊 */
+.bg .bg_img {height: 48vh;width: 100%;filter: blur(8rpx);position: relative;}
+.bg .bg_info {position: absolute;left: 50%;transform: translateX(-50%);top: 26%;text-align: center;width: 200rpx;}
+.bg_info .info_icon {width: 80rpx;height: 80rpx;border-radius: 50%;}
+.bg_info .info_name {color: white;margin-top: 40rpx;}
+/* 登录层 */
+.user .login {position: absolute;left: 50%;transform: translateX(-50%);top: 26%;text-align: center;border: 1rpx solid greenyellow;color: greenyellow;font-size: 34rpx;padding: 30rpx 100rpx;border-radius: 10rpx;}
+
+/* 主体 */
+.user_content {position: relative;}
+.user_content .user_main {position: absolute;width: 90%;left: 50%;transform: translateX(-50%);top: -40rpx;border-radius: 10rpx;padding-bottom: 100rpx;}
+/* 历史足迹 */
+.user_main .history {display: flex;flex-wrap: wrap;background-color: white;}
+.history .his_nav {flex: 1;text-align: center;padding: 10rpx 0;}
+.his_nav .his_num {color: var(--themeColor);}
+/* 我的订单 */
+.user_main .order {background-color: white;margin-top: 20rpx;}
+.order .order_title {padding: 20rpx;border-bottom: 1rpx solid #ccc;font-size: 34rpx;}
+.order .order_main {display: flex;flex-wrap: wrap;}
+.order_main .order_nav {flex: 1;text-align: center;padding: 15rpx 0;}
+.order_nav .iconfont {color: var(--themeColor);font-size: 40rpx;}
+/* 收货地址管理 */
+.user_main .address {margin-top: 20rpx;background-color: white;padding: 20rpx;color: #666666;font-size: 30rpx;}
+/* 应用信息 */
+.user_main .app_info {background-color: white;color: #666666;margin-top: 20rpx;font-size: 30rpx;}
+.app_info .app_info_item {border-bottom: 1rpx solid #ccc;padding: 20rpx;font-weight: 100;}
+.app_info .contact {display: flex; justify-content: space-between;background-color: white;color: #666666;width: 100%;}
+/* 推荐 */
+.user_main .recommend {background-color: white;padding: 20rpx;margin-top: 20rpx;font-size: 30rpx;color: #666666;}

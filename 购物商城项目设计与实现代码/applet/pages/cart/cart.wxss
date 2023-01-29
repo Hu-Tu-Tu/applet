@@ -1,0 +1,36 @@
+page {padding-bottom: 90rpx;}
+/* 收货地址 */
+.address .but {padding: 20rpx;}
+
+.addressInfo {display: flex;align-items: center;text-align: center;height: 100rpx;padding: 10rpx 0;border-bottom: 2rpx solid #eeeeee;}
+.addressInfo .iconfont {padding: 0 30rpx;}
+.addressInfo .info {display: flex;flex-direction: column;justify-content: space-between;align-items: flex-start;}
+
+/* 购物车 */
+/* title */
+.cart_content .title {padding: 20rpx;font-size: 40rpx;color: var(--themeColor);font-weight: 600;background-color: azure;border-bottom: 2rpx solid #eeeeee;}
+/* main */
+/* 添加一个可以换行，不然下面的item不换行 */
+.main {display: flex;justify-content: center;flex-wrap: wrap;}
+.main .main_pic {width: 600rpx;justify-content:center;}
+.main .main_item {display: flex;border-bottom: 2rpx solid #eeeeee;height: 140rpx;}
+/* 复选框 width: 106rpx; */
+.main_item .choose_box {display: flex;justify-content: center;align-items: center;width: 58rpx;}
+/* 图片 width: 166rpx;*/
+.main_item .choose_pic {display: flex;justify-content: center;align-items: center;width: 166rpx;margin:0 30rpx;}
+.choose_pic .pic {width: 100%;height: 140rpx;}
+/* 商品信息 width: 212rpx;*/
+.main_item .choose_info {width: 60%; display: flex;justify-content: space-between;flex-direction: column;}
+.choose_info .goods_name {color: #666666;display: -webkit-box;overflow: hidden;-webkit-box-orient: vertical;-webkit-line-clamp: 2;}
+.choose_info .goods_price {display: flex;justify-content: space-between;}
+.goods_price .price_left {color: var(--themeColor);font-weight: 600;font-size: 31rpx;}
+.goods_price .price_right {display: flex;}
+.price_right .num_editor {width: 50rpx;height: 50rpx;display: flex;justify-content: center;align-items: center;border: 1rpx solid #ccc;}
+.price_right .num_content {width: 50rpx;height: 50rpx;display: flex;justify-content: center;align-items: center;}
+
+/* 底部工具栏 */
+.footer {position:fixed;bottom:0;left: 0;width: 100%;height: 90rpx;background-color: white;display: flex;border-top: 1rpx solid #ccc;}
+.footer .all {flex: 2;display: flex;justify-content: center;align-items: center;}
+.footer .sum {flex: 4;text-align: right;padding-right: 17rpx;font-size: 26rpx;}
+.sum_price .price {color: var(--themeColor);font-weight: 600;font-size: 34rpx;}
+.footer .pay {flex: 2;background-color: red;color: white;font-size: 37rpx;font-weight: 500;display: flex;justify-content: center;align-items: center;}

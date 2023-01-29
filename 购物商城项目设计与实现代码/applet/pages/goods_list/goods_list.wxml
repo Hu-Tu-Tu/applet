@@ -1,0 +1,45 @@
+<!-- 自定义组件-搜索框 -->
+<searchinput/>
+<!-- 自定义组件tabs -->
+<!-- 监听自定义事件 -->
+<tabs tabs="{{tabs}}" bindtabsClick="tabsClick">
+    <block wx:if="{{tabs[0].isActive}}" class="container">
+        <navigator class="goods_item " wx:for="{{goodsList}}" wx:key="*this" url="/pages/goods_detail/goods_detail?goods_id={{item.goods_id}}">
+            <!-- 左侧图片 -->
+            <view class="pic">
+                <image class="goods_item_pic" mode="widthFix" src="{{item.goods_small_logo?item.goods_small_logo:'/images/loading.gif'}}"></image>
+            </view>
+            <!-- 右侧文字 -->
+            <view class="info">
+                <view class="info_title">{{item.goods_name}}</view>
+                <view class="info_price">￥{{item.goods_price}}</view>
+            </view>
+        </navigator>
+    </block>
+    <block wx:elif="{{tabs[1].isActive}}">
+        <navigator class="goods_item " wx:for="{{hot}}" wx:key="*this" url="/pages/goods_detail/goods_detail?goods_id={{item.goods_id}}">
+            <!-- 左侧图片 -->
+            <view class="pic">
+                <image class="goods_item_pic" mode="widthFix" src="{{item.goods_small_logo?item.goods_small_logo:'/images/loading.gif'}}"></image>
+            </view>
+            <!-- 右侧文字 -->
+            <view class="info">
+                <view class="info_title">{{item.goods_name}}</view>
+                <view class="info_price">￥{{item.goods_price}}</view>
+            </view>
+        </navigator>
+    </block>
+    <block wx:elif="{{tabs[2].isActive}}">
+        <navigator class="goods_item " wx:for="{{priceList}}" wx:key="*this" url="/pages/goods_detail/goods_detail?goods_id={{item.goods_id}}">
+            <!-- 左侧图片 -->
+            <view class="pic">
+                <image class="goods_item_pic" mode="widthFix" src="{{item.goods_small_logo?item.goods_small_logo:'/images/loading.gif'}}"></image>
+            </view>
+            <!-- 右侧文字 -->
+            <view class="info">
+                <view class="info_title">{{item.goods_name}}</view>
+                <view class="info_price">￥{{item.goods_price}}</view>
+            </view>
+        </navigator>
+    </block>
+</tabs>

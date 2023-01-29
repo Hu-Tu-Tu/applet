@@ -1,0 +1,40 @@
+<!-- 自定义导航栏 -->
+<view class="navbar" style="padding: {{statusBarHeight}}rpx 0;">
+    <view class="navbar_main">
+        <!-- 点击返回 -->
+        <view class="navbar_action" style="top: {{navTop}}px;">
+            <view class="iconfont icon-fanhui" style="color: black;" catchtap="goBack"></view>
+        </view>
+        <!-- 搜索框 -->
+        <view class="navbar_title" >
+            <icon class="title_icon" type="search"></icon>
+            <input type="text" class="title_input" placeholder="请输入搜索内容" placeholder-class="phcolor" bindinput="getInputValue" value="{{inputValue}}"/>
+        </view>
+        <!-- 取消 -->
+        <button class="navbar_but" size="mini" plain hidden="{{!isFocus}}" bindtap="cancel">取消</button>
+    </view>
+</view>
+
+<!-- 历史搜索 -->
+<view class="history">
+    <!-- 标题栏 -->
+    <view class="history_title">
+        <view class="title_text">历史搜索</view>
+        <view class="iconfont {{eye?'icon-yanjing_xianshi_o':'icon-yanjing_yincang_o'}}" bindtap="eyeChange"></view>
+        <view class="title_remove" bindtap="cancelHistory">清除</view>
+    </view>
+    <!-- 最近搜索的内容显示 -->
+    <view class="history_main">
+        <view class="his_item" wx:for="{{historyStorage}}" wx:key="*this" bindtap="cancelItem" data-index="{{index}}">
+            <text>{{item}}</text>
+        </view>
+    </view>
+</view>
+
+<!-- 搜索列表 -->
+<view class="search_content">
+    <view class="search_item container" wx:for="{{goods}}" wx:key="*this" >
+        <navigator class="item_txt" url="/pages/goods_detail/goods_detail?goods_id={{item.goods_id}}">{{item.goods_name}}</navigator>
+        <view class="iconfont icon-24gl-arrowLu" bindtap="upValue" data-value="{{item.goods_name}}"></view>
+    </view>
+</view>

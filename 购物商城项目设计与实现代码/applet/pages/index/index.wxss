@@ -1,0 +1,40 @@
+/* 使用主题颜色 */
+view {color: var(--themeColor);}
+
+/* 轮播图 */
+.banner {width:750rpx;height: 340rpx;}
+.banner-item .banner-pic {width: 100%;height: 100%;}
+
+/* 轮播下面的导航栏 */
+/* white-space: nowrap设置不换行 */
+.major {white-space: nowrap; padding: 25rpx 0;}
+/* display: inline-block行列块 */
+.major navigator {text-align: center; width: 170rpx; display: inline-block;}
+.major image {width: 110rpx; height: 110rpx;}
+.major .txt {font-size: 26rpx; margin-top: 8rpx;}
+/* .major .major-nav {position: fixed} */
+
+/* 专题 750-50=700*/
+.topic {position: relative;align-items: center;width: 100%; height: 130rpx;text-align: center;display: flex; justify-content: center;flex-direction: column;position: relative;}
+.topic .topic-txt {font-size: 60rpx;position: absolute;font-family:"隶书";text-transform: uppercase;border: solid white;border-width: 4rpx 0 4rpx 0; width: 100%;}
+
+/* 楼层 */
+.floor_title .outpic {height: 82rpx;}
+.floor_group .floor_list {
+    /* 清除浮动 */
+    overflow: hidden;
+}
+/* 左右两边的图片采用不同的操作 */
+.floor_list .pic-left {
+    float: left;
+    width: 33.33%;
+    margin-bottom: 30rpx;
+}
+.floor_list .pic-right {
+    float:right;
+    width: 33.33%;
+    height: 195rpx;
+    border-left: 10rpx solid aliceblue;
+    border-bottom: 10rpx solid aliceblue;
+}
+
